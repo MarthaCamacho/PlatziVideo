@@ -1,21 +1,20 @@
-
 @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
 body {
     margin: 0;
-    background-color: #AB88FF;
+    background-color: #8f57fd;
     font-family: 'Muli', sans-serif;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 0 30px;
+    margin: 20px 30px 100px;
+    align-items: center;
 }
 
 .header__img {
-    width: 250px;
-    height: 90px;
+    width: 150px;
+    height: 50px;
 }
 
 .header__menu {
@@ -44,19 +43,52 @@ body {
 }
 
 .header__menu li {
-    margin:10px 0;
+    margin: 10px 0;
 }
 
 .header__menu li a {
     text-decoration: none;
     color: white;
 }
-.header__menu li a:hover{
-    text-decoration:underline;
+
+.header__menu li a:hover {
+    text-decoration: underline;
 }
 
 .header__menu:hover ul, ul:hover {
     display: block;
 }
 
+.main {
+    height: 300px;
+    display: flex-inline;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main__title {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 70%;
+    height: 50px;
+    padding: 0 20px;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+.input:focus {
+    outline: none;
+}
+
+/*Color Placeholder Input */
+::placeholder {
+    color: white;
+}
 
