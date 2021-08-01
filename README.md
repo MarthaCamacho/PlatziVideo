@@ -1,1 +1,1 @@
-# PlatziLive
+# PlatziVideo
