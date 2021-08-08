@@ -14,7 +14,7 @@
     width: 200px;
     height: 250px;
     border-radius: 20px;
-    /* margin-right: 10px; */
+    margin-right: 5px; 
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
@@ -46,9 +46,9 @@
 }
 
 .carouselItem__details{
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);
     font-size: 10px;
-    opacity: 0;
+    opacity:0;
     transition: 450ms opacity;
     padding: 10px;
     position: absolute;
@@ -56,4 +56,25 @@
     left:0;
     right:0;
     bottom: 0;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: 'Muli', sans-serif;
+}
+
+.carouselItem__details:hover{
+    opacity:1;
+}
+.carouselItem__details--img {
+    height: 30px;
+    width: 30px;
+    margin:0 4px 10px 0;
+}
+.carouselItem__details--title{
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+.carouselItem__details--subtitle{
+    margin: 0 0 5px;
 }
