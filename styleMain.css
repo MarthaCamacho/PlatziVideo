@@ -84,13 +84,20 @@ body {
     font-family: 'Muli', sans-serif;
     font-size: 16px;
     color: white;
-}
-.input:focus {
     outline: none;
 }
+
 
 /*Color Placeholder Input */
 ::placeholder {
     color: white;
+}
+
+.categories__title{
+    color:white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
 }
 

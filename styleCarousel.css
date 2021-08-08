@@ -1,11 +1,18 @@
 .carousel {
     width: 100%;
-    overflow: scroll;/*Scroll vertical*/
+    overflow-y: scroll; /*Scroll vertical*/
     padding: 30px;
+    position: relative;
+}
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel__container {
     white-space: nowrap;
+    transition: 450ms -webkit-transform;
+    transition: 450ms transform;
+    transition: 450ms transform, 450ms -webkit-transform;
     margin: 70px 0px;
     padding-bottom: 10px;
 }
@@ -14,17 +21,17 @@
     width: 200px;
     height: 250px;
     border-radius: 20px;
-    margin-right: 5px; 
+    margin-right: 5px;
     overflow: hidden;
     display: inline-block;
     cursor: pointer;
     transition: 450ms all;
     transform-origin: center left;
     /*Para que no se salga del contenedor al crecer*/
-    position: relative; 
+    position: relative;
 }
 
-.carouselItem:hover~.carouselItem {
+.carouselItem:hover ~ .carouselItem {
     transform: translate3d(100px, 0, 0);
     /*Los elementos desde el item seleccionado se corren 100px en el eje x*/
 }
@@ -39,42 +46,42 @@
     opacity: 1;
 }
 
-.carouselItem__img{
+.carouselItem__img {
     width: 200px;
     height: 250px;
     object-fit: cover;
 }
 
-.carouselItem__details{
-    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0) 100%);
+.carouselItem__details {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
     font-size: 10px;
-    opacity:0;
+    opacity: 0;
     transition: 450ms opacity;
     padding: 10px;
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 0;
-    color:white;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    font-family: 'Muli', sans-serif;
+    font-family: "Muli", sans-serif;
 }
 
-.carouselItem__details:hover{
-    opacity:1;
+.carouselItem__details:hover {
+    opacity: 1;
 }
 .carouselItem__details--img {
     height: 30px;
     width: 30px;
-    margin:0 4px 10px 0;
+    margin: 0 4px 10px 0;
 }
-.carouselItem__details--title{
+.carouselItem__details--title {
     margin: 0 0 5px;
     font-weight: 600;
 }
-.carouselItem__details--subtitle{
+.carouselItem__details--subtitle {
     margin: 0 0 5px;
 }
